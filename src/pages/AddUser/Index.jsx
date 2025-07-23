@@ -101,11 +101,11 @@ const AddUser = ({ addUser }) => {
     setIsSubmitting(true);
 
     addUser(formData);
-    navigate("/users");
+    navigate("/");
   };
 
   const handleBack = () => {
-    navigate("/users");
+    navigate("/");
   };
   return (
     <div>

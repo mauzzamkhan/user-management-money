@@ -47,7 +47,6 @@ function App() {
           <div ref={nodeRef}>
             <Routes location={location}>
               <Route index element={<UserList users={users} loading={loading} />} />
-              <Route path="users" element={<UserList users={users} loading={loading} />} />
               <Route path="add-user" element={<AddUser addUser={addUser} users={users} />} />
             </Routes>
           </div>
