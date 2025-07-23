@@ -45,11 +45,10 @@ function App() {
           unmountOnExit
         >
           <div ref={nodeRef}>
-
             <Routes location={location}>
-              <Route path="/" element={<Navigate to="/users" replace />} />
-              <Route path="/users" element={<UserList users={users} loading={loading} />} />
-              <Route path="/add-user" element={<AddUser addUser={addUser} users={users} />} />
+              <Route index element={<UserList users={users} loading={loading} />} />
+              <Route path="users" element={<UserList users={users} loading={loading} />} />
+              <Route path="add-user" element={<AddUser addUser={addUser} users={users} />} />
             </Routes>
           </div>
         </CSSTransition>
